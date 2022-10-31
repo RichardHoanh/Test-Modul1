@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<h1>Tính điểm trung bình</h1>
+<div id="result"></div><br>
+<input type="button" onclick="findAvg()" value="Điểm trung bình">
+</body>
+</html>
+<script>
+    let point = [];
+    function themDiem() {
+        for (let dem = 0; dem < 3; dem++) {
+            let diem = +prompt("Nhập điểm");
+            point.push(diem);
+        }
+    }
+    function findAvg() {
+        themDiem()
+        let sum=0;
+        for (let i = 0; i < point.length; i++) {
+            sum = sum + point[i];
+        }
+        let avgpoint = sum / (point.length)
+        document.getElementById("result").innerHTML = "Điểm trung bình là: " + avgpoint
+    }
+</script>
